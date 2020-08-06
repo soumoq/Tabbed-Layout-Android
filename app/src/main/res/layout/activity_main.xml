@@ -7,6 +7,12 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/click_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click me"/>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
