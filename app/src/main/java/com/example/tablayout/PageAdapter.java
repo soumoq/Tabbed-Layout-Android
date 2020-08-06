@@ -6,20 +6,38 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 public class PageAdapter extends FragmentPagerAdapter {
+    private int numOfTab;
 
 
-    public PageAdapter(@NonNull FragmentManager fm) {
+    public PageAdapter(@NonNull FragmentManager fm,int numOfTab) {
         super(fm);
+        this.numOfTab = numOfTab;
     }
+
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return null;
+        switch (position){
+            case 0:
+                return new Tab1();
+            case 1:
+                return new Tab2();
+            case 2:
+                return new Tab3();
+            default:
+                return null;
+
+        }
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return numOfTab;
+    }
+
+    @Override
+    public int getItemPosition(@NonNull Object object) {
+        return POSITION_NONE;
     }
 }
